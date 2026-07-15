@@ -1,0 +1,193 @@
+<!--
+    View Student Details Page
+    Shows marks and average
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+    <title>
+        View Student
+    </title>
+
+
+    <link rel="stylesheet" href="/static/style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+    View Student Details
+</h1>
+
+
+
+<form method="POST">
+
+
+<label>
+    Enter Roll Number:
+</label>
+
+
+<br>
+
+
+<input
+type="number"
+name="roll"
+placeholder="Enter roll number"
+required
+>
+
+
+<br><br>
+
+
+
+<button type="submit">
+
+    Search Student
+
+</button>
+
+
+
+</form>
+
+
+
+
+<br><br>
+
+
+
+{% if student %}
+
+
+
+<h2>
+    Student Information
+</h2>
+
+
+<p>
+    Name : {{ student[1] }}
+</p>
+
+
+<p>
+    Roll Number : {{ student[2] }}
+</p>
+
+
+
+<h2>
+    Grades
+</h2>
+
+
+
+<table>
+
+
+<tr>
+
+<th>
+    Subject
+</th>
+
+
+<th>
+    Marks
+</th>
+
+
+</tr>
+
+
+
+
+{% for grade in grades %}
+
+
+<tr>
+
+
+<td>
+    {{ grade[0] }}
+</td>
+
+
+<td>
+    {{ grade[1] }}
+</td>
+
+
+</tr>
+
+
+
+{% endfor %}
+
+
+
+</table>
+
+
+
+
+<h2>
+
+Average Marks : {{ average }}
+
+</h2>
+
+
+
+{% elif student == None %}
+
+
+
+<p>
+    Enter roll number to search student.
+</p>
+
+
+
+{% endif %}
+
+
+
+
+<br>
+
+
+<a href="/">
+    Back to Home
+</a>
+
+
+
+
+</div>
+
+
+
+</body>
+
+
+</html>

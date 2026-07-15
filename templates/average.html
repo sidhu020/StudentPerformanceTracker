@@ -1,0 +1,117 @@
+<!--
+    Average Report Page
+    Shows average marks of all students
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+    <title>
+        Average Report
+    </title>
+
+
+    <link rel="stylesheet" href="/static/style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+    Student Average Report
+</h1>
+
+
+
+<table>
+
+
+<tr>
+
+
+<th>
+    Name
+</th>
+
+
+<th>
+    Roll Number
+</th>
+
+
+<th>
+    Average Marks
+</th>
+
+
+</tr>
+
+
+
+
+{% for student in result %}
+
+
+
+<tr>
+
+
+<td>
+    {{ student[0] }}
+</td>
+
+
+<td>
+    {{ student[1] }}
+</td>
+
+
+<td>
+    {{ student[2] }}
+</td>
+
+
+
+</tr>
+
+
+
+
+{% endfor %}
+
+
+
+</table>
+
+
+
+
+<br>
+
+
+<a href="/">
+    Back to Home
+</a>
+
+
+
+</div>
+
+
+
+</body>
+
+
+</html>

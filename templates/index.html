@@ -1,0 +1,126 @@
+<!--
+    Home Page
+    Student Performance Tracker
+
+    Simple HTML made for BCA project
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        Student Performance Tracker
+    </title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+    Student Performance Tracker
+</h1>
+
+
+<p>
+    Welcome Teacher
+</p>
+
+
+
+<div class="menu">
+
+
+<a href="/add_student">
+    Add Student
+</a>
+
+
+<a href="/add_grades">
+    Add Grades
+</a>
+
+
+<a href="/view_student">
+    View Student
+</a>
+
+
+<a href="/average">
+    Class Average
+</a>
+
+
+</div>
+
+
+
+
+<h2>
+    All Students
+</h2>
+
+
+
+<table>
+
+
+<tr>
+
+<th>
+    Name
+</th>
+
+
+<th>
+    Roll Number
+</th>
+
+
+</tr>
+
+
+
+{% for student in students %}
+
+
+<tr>
+
+
+<td>
+    {{ student[1] }}
+</td>
+
+
+<td>
+    {{ student[2] }}
+</td>
+
+
+</tr>
+
+
+{% endfor %}
+
+
+
+</table>
+
+
+
+</div>
+
+
+</body>
+
+
+</html>
