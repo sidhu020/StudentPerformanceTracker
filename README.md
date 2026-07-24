@@ -2,6 +2,10 @@
 
 > A **Flask-based Student Performance Tracker** developed as an **MCA Mini Project** to help teachers manage student records, subject-wise grades, and academic performance efficiently.
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=render)](https://studentperformancetracker-nqyc.onrender.com)
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/sidhu020/StudentPerformanceTracker)
+
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Flask](https://img.shields.io/badge/Framework-Flask-black?logo=flask)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite)
@@ -386,7 +390,15 @@ docs/ER_Diagram.png
 
 # 🌐 Deployment
 
-The application is deployed using **Render Cloud Platform**.
+The application is deployed on **Render Cloud Platform** and can be accessed online.
+
+## 🚀 Live Application
+
+https://studentperformancetracker-nqyc.onrender.com/
+
+## 📂 Source Code
+
+https://github.com/sidhu020/StudentPerformanceTracker
 
 ## Build Command
 
