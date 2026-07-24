@@ -1,383 +1,500 @@
-# Student Performance Tracker
+# 🎓 Student Performance Tracker
 
-## Project Title
+> A **Flask-based Student Performance Tracker** developed as an **MCA Mini Project** to help teachers manage student records, subject-wise grades, and academic performance efficiently.
 
-**Student Performance Tracker**
-
----
-
-## Project Description
-
-Student Performance Tracker is a Python Flask based web application developed to help teachers manage student academic records.
-
-The application allows teachers to add student details, assign subject-wise grades, view student performance, and calculate average marks.
-
-The project uses Python concepts like Object-Oriented Programming (OOP), functions, loops, conditional statements, Flask framework, and SQLite database integration.
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Flask](https://img.shields.io/badge/Framework-Flask-black?logo=flask)
+![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite)
+![HTML](https://img.shields.io/badge/Frontend-HTML-orange?logo=html5)
+![CSS](https://img.shields.io/badge/Style-CSS-blue?logo=css3)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-# Objectives
+# 📖 Table of Contents
+
+- 📌 Project Overview
+- 🎯 Objectives
+- ✨ Features
+- 🛠️ Technologies Used
+- 📂 Project Structure
+- ⚙️ Installation Guide
+- 🚀 Running the Application
+- 💻 Usage
+- 🗄️ Database Design
+- 🏗️ Object-Oriented Design
+- 🎥 Project Demonstration
+- 🌐 Deployment
+- 🔮 Future Enhancements
+- 🤝 Contributing
+- 👨‍💻 Author
+- 📄 License
+
+---
+
+# 📌 Project Overview
+
+**Student Performance Tracker** is a web application developed using **Python Flask** and **SQLite**. It allows teachers to digitally manage student information, assign subject-wise marks, and generate academic reports.
+
+This project demonstrates the practical implementation of:
+
+- 🐍 Python Programming
+- 🧩 Object-Oriented Programming (OOP)
+- 🌐 Flask Web Framework
+- 🗄️ SQLite Database
+- 🎨 HTML & CSS
+- ☁️ Cloud Deployment (Render)
+
+---
+
+# 🎯 Objectives
 
 The main objectives of this project are:
 
-- To store student information digitally.
-- To manage subject-wise student grades.
-- To calculate average performance of students.
-- To provide a simple web interface for teachers.
-- To learn Flask web development and database integration.
+- ✅ Store student information digitally
+- ✅ Manage subject-wise grades
+- ✅ Calculate average marks automatically
+- ✅ Generate performance reports
+- ✅ Learn Flask web development
+- ✅ Practice database integration using SQLite
 
 ---
 
-# Technologies Used
+# ✨ Features
 
-## Programming Language
+## 👨‍🎓 Student Management
 
-- Python
-
-## Framework
-
-- Flask
-
-## Database
-
-- SQLite
-
-## Frontend
-
-- HTML
-- CSS
-
-## Deployment
-
-- Render Cloud Platform
-
----
-
-# Features
-
-## 1. Add Students
-
-Teachers can add new students with:
-
-- Student Name
-- Roll Number
-
+- Add new students
+- Store student name
+- Store roll number
 
 Example:
 
-
-Name:
-Rahul Patel
-
-Roll Number:
-101
-
+| Name | Roll Number |
+|------|-------------|
+| Rahul Patel | 101 |
 
 ---
 
-## 2. Add Grades
+## 📝 Grade Management
 
-Teachers can add marks for different subjects.
+Teachers can assign marks for multiple subjects.
 
-Supported examples:
+Supported Subjects:
 
 - Mathematics
 - Science
 - English
-
-
-Example:
-
-
-Roll Number:
-101
-
-Subject:
-Math
-
-Marks:
-90
-
-
-The application checks that marks are between 0 and 100.
-
----
-
-## 3. View Student Details
-
-Teachers can search students using their roll number.
-
-The system displays:
-
-- Student name
-- Roll number
-- Subject marks
-- Average marks
-
+- Computer
+- Any Custom Subject
 
 Example:
 
+| Roll No | Subject | Marks |
+|---------|----------|-------|
+|101|Math|90|
 
-Name: Rahul Patel
+✔ Validation included
 
-Math 90
-Science 80
-English 85
-
-Average: 85
-
+- Marks must be between **0–100**
 
 ---
 
-## 4. Class Average Report
+## 📊 Student Performance Report
 
-The application calculates average marks of all students.
+Search any student using Roll Number.
 
-Example:
+The report displays:
 
+- Student Name
+- Roll Number
+- Subject-wise Marks
+- Average Marks
 
-Name Roll Number Average
+Example
 
-Rahul 101 85
+| Subject | Marks |
+|---------|------|
+|Math|90|
+|Science|80|
+|English|85|
 
-Amit 102 75
+Average
 
+> **85%**
 
 ---
 
-# Project Structure
+## 📈 Class Average Report
 
+Displays average marks of all students.
 
+Example
+
+| Student | Roll No | Average |
+|----------|---------|----------|
+|Rahul|101|85|
+|Amit|102|75|
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|----------|
+|🐍 Python|Backend Programming|
+|🌐 Flask|Web Framework|
+|🗄 SQLite|Database|
+|🎨 HTML5|Frontend|
+|💙 CSS3|Styling|
+|☁ Render|Deployment|
+
+---
+
+# 📂 Project Structure
+
+```text
 StudentPerformanceTracker/
-
 │
-├── app.py
-│ Main Flask application
-│
-├── student.py
-│ Student class implementation
-│
-├── tracker.py
-│ Student management class
-│
-├── database.py
-│ SQLite database functions
-│
-├── requirements.txt
-│ Required Python packages
-│
-├── Procfile
-│ Deployment configuration
-│
-├── README.md
-│ Project documentation
-│
-├── students.db
-│ SQLite database file
+├── app.py                  # Main Flask Application
+├── student.py              # Student Class
+├── tracker.py              # Student Management Logic
+├── database.py             # SQLite Database Functions
+├── students.db             # SQLite Database
+├── requirements.txt        # Required Packages
+├── Procfile                # Deployment Configuration
+├── README.md               # Documentation
 │
 ├── templates/
-│
-│ ├── index.html
-│ ├── add_student.html
-│ ├── add_grades.html
-│ ├── view_student.html
-│ └── average.html
+│   ├── index.html
+│   ├── add_student.html
+│   ├── add_grades.html
+│   ├── view_student.html
+│   └── average.html
 │
 └── static/
-
-└── style.css
-
----
-
-# Installation Guide
-
-## Step 1: Download Project
-
-Download or clone this project.
-
-Open terminal inside the project folder.
+    └── style.css
+```
 
 ---
 
-## Step 2: Install Required Packages
+# ⚙️ Installation Guide
 
-Run:
+## Step 1️⃣ Clone Repository
 
+```bash
+git clone https://github.com/sidhu020/StudentPerformanceTracker.git
+```
 
+or download ZIP.
+
+---
+
+## Step 2️⃣ Navigate into Project
+
+```bash
+cd StudentPerformanceTracker
+```
+
+---
+
+## Step 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
-
+```
 
 ---
 
-## Step 3: Run Application
+## Step 4️⃣ Run Flask Application
 
-Start the Flask server:
-
-
+```bash
 python app.py
-
+```
 
 ---
 
-## Step 4: Open Website
+## Step 5️⃣ Open Browser
 
-Open browser and visit:
-
-
+```
 http://127.0.0.1:5000
-
-
----
-
-# How To Use Application
-
-## Add Student
-
-1. Open the home page.
-2. Click on "Add Student".
-3. Enter student name and roll number.
-4. Click submit.
-
-The student will be stored in the database.
+```
 
 ---
 
-## Add Grades
+# 🚀 Usage Guide
 
-1. Click "Add Grades".
-2. Enter student roll number.
-3. Enter subject name.
-4. Enter marks between 0 and 100.
-5. Submit the form.
+## ➕ Add Student
 
----
+- Open Home Page
+- Click **Add Student**
+- Enter Student Name
+- Enter Roll Number
+- Submit
 
-## View Student Report
-
-1. Open "View Student".
-2. Enter roll number.
-3. Click search.
-
-The complete performance report will be displayed.
+Student is saved into the database.
 
 ---
 
-## View Average Report
+## 📝 Add Grades
 
-1. Open "Class Average".
-2. The system will display average marks of all students.
+- Open Add Grades
+- Enter Roll Number
+- Enter Subject
+- Enter Marks
+- Submit
+
+Validation:
+
+```
+Marks must be between 0 and 100.
+```
 
 ---
 
-# Database Information
+## 🔍 View Student
 
-The project uses SQLite database.
+- Open View Student
+- Enter Roll Number
+- Click Search
 
-Database name:
+Displays:
 
+- Student Details
+- Subject Marks
+- Average Marks
 
+---
+
+## 📈 View Class Average
+
+Click
+
+```
+Class Average
+```
+
+Shows average marks of every student.
+
+---
+
+# 🗄️ Database Design
+
+Database Name
+
+```
 students.db
-
-
-Two tables are created:
+```
 
 ## Students Table
 
-Stores:
-
-- Student ID
-- Name
-- Roll Number
-
-
-## Grades Table
-
-Stores:
-
-- Grade ID
-- Roll Number
-- Subject
-- Marks
+| Field | Type |
+|---------|------|
+|id|INTEGER|
+|name|TEXT|
+|roll_number|INTEGER|
 
 ---
 
-# Object-Oriented Design
+## Grades Table
 
-## Student Class
+| Field | Type |
+|---------|------|
+|id|INTEGER|
+|roll_number|INTEGER|
+|subject|TEXT|
+|marks|INTEGER|
 
-The Student class contains:
+---
 
-Attributes:
+# 🏗️ Object-Oriented Design
+
+## 📘 Student Class
+
+### Attributes
 
 - name
 - roll_number
 - grades
 
+### Methods
 
-Methods:
-
-- add_grade()
-- calculate_average()
-- display_info()
-
-
-## StudentTracker Class
-
-The StudentTracker class manages multiple students.
-
-Methods:
-
-- add_student()
-- add_grades()
-- view_student_details()
-- calculate_average()
+```python
+add_grade()
+calculate_average()
+display_info()
+```
 
 ---
 
-# Deployment
+## 📗 StudentTracker Class
 
-The application can be deployed using Render.
+Responsible for managing all students.
 
-Deployment files included:
+Methods
 
+```python
+add_student()
 
-requirements.txt
+add_grades()
 
-Procfile
+view_student_details()
 
+calculate_average()
+```
+---
 
-Start command:
+# 🎥 Project Demonstration
 
+## 📹 Demo Video
 
+**Google Drive**
+
+```
+https://drive.google.com/file/d/YourVideoID/view
+```
+
+---
+
+# 📄 Project Documentation
+
+📘 Project Report (PDF)
+
+```
+docs/StudentPerformanceTracker_Report.pdf
+```
+
+📙 PPT Presentation
+
+```
+docs/Presentation.pptx
+```
+
+📑 UML Diagram
+
+```
+docs/UML_Diagram.pdf
+```
+
+📂 ER Diagram
+
+```
+docs/ER_Diagram.png
+```
+
+---
+
+# 🌐 Deployment
+
+The application is deployed using **Render Cloud Platform**.
+
+## Build Command
+
+```bash
+pip install -r requirements.txt
+```
+
+## Start Command
+
+```bash
 python app.py
-
-
----
-
-# Future Improvements
-
-The following features can be added in future:
-
-- Student login system
-- Teacher login system
-- Subject-wise topper calculation
-- Export reports as PDF
-- Email notifications
-- Better user interface design
-- MySQL database integration
+```
 
 ---
 
-# Conclusion
+# 🔮 Future Enhancements
 
-Student Performance Tracker provides an easy way to manage student academic records.
-
-This project demonstrates the practical use of Python programming, Object-Oriented Programming, Flask web development, and database management.
+- 🔐 Teacher Login
+- 👨‍🎓 Student Login
+- 📈 Subject-wise Topper
+- 📥 Export PDF Reports
+- 📧 Email Notifications
+- 📊 Graphical Dashboard
+- ☁ MySQL Integration
+- 📱 Responsive UI
+- 🌙 Dark Mode
+- 📤 Excel Export
 
 ---
 
-# Author
+# 🤝 Contributing
 
-BCA Student Mini Project
+Contributions are welcome!
 
-Project: Student Performance Tracker
+If you would like to improve this project:
+
+1. Fork the repository
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push the branch
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+# 👨‍💻 Author
+
+**Name:** *Siddharth*
+
+🎓 MCA Student
+
+🏫 *Department of Computer Science, Saurashtra University, Rajkot*
+
+🔗 LinkedIn: https://www.linkedin.com/in/siddharthborisagar/
+
+🐙 GitHub: https://github.com/sidhu020
+
+---
+
+# 🙏 Acknowledgements
+
+Special thanks to:
+
+- Flask Documentation
+- Python Community
+- SQLite Documentation
+- Open Source Contributors
+
+---
+
+# 📄 License
+
+This project is created for **academic and educational purposes**.
+
+You are free to use and modify this project for learning.
+
+---
+
+# ⭐ Support
+
+If you found this project helpful:
+
+⭐ Star this repository
+
+🍴 Fork the repository
+
+📢 Share it with others
+
+---
+
+## ❤️ Thank You
+
+**Student Performance Tracker**
+
+*A simple yet powerful academic management system built using Python Flask.*
+
+**Made with ❤️ by an MCA Student**
